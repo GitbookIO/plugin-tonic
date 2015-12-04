@@ -1,0 +1,25 @@
+{
+    "name": "gitbook-plugin-tonic",
+    "description": "Embed tonic notebook into your book",
+    "main": "index.js",
+    "version": "0.0.0",
+    "engines": {
+        "gitbook": ">=2.0.0"
+    },
+    "homepage": "https://github.com/GitbookIO/plugin-tonic",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GitbookIO/plugin-tonic.git"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/GitbookIO/plugin-tonic/issues"
+    },
+    "devDependencies": {
+        "gitbook-tester": "1.0.3",
+        "mocha": "2.3.4"
+    },
+    "scripts": {
+        "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
+    }
+}
