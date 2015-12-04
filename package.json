@@ -14,12 +14,5 @@
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/GitbookIO/plugin-tonic/issues"
-    },
-    "devDependencies": {
-        "gitbook-tester": "1.0.3",
-        "mocha": "2.3.4"
-    },
-    "scripts": {
-        "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
     }
 }
