@@ -10,7 +10,7 @@ module.exports = {
     blocks: {
         tonic: {
             process: function(block) {
-                var readOnly = Boolean(block.kwargs.readOnly == "true");
+                var readOnly = Boolean(block.kwargs.readOnly);
                 var className = 'pg-tonic';
                 if (readOnly) className += ' readonly';
 
