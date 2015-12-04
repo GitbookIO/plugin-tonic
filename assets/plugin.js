@@ -1,14 +1,16 @@
 require(["gitbook", "jQuery"], function(gitbook, $) {
     function bindNotebook() {
-        var $div = $(this);
-        var source = $div.html();
-        $div.html('');
+        var $pre = $(this);
+        var source = $pre.html();
+        var readOnly = $pre.hasClass('readonly');
 
-        console.log('bind tonic', source);
+        var $div = $('<div>');
+        $pre.replaceWith($div);
+
         var notebook = Tonic.createNotebook({
             element: $div.get(0),
             source: source,
-            readOnly: $div.hasClass('readonly'),
+            readOnly: readOnly,
             onLoad: function(){}
         });
     }

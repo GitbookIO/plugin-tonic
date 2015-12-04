@@ -14,7 +14,7 @@ module.exports = {
                 var className = 'pg-tonic';
                 if (readOnly) className += ' readonly';
 
-                return '<div class="' + className + '">' + block.body + '</div>';
+                return '<pre class="' + className + '">' + block.body + '</pre>';
             }
         }
     }
