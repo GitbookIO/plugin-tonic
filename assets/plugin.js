@@ -1,7 +1,7 @@
 require(["gitbook", "jQuery"], function(gitbook, $) {
     function bindNotebook() {
         var $pre = $(this);
-        var source = $pre.html();
+        var source = $pre.text();
         var readOnly = $pre.hasClass('readonly');
 
         var $div = $('<div>');
