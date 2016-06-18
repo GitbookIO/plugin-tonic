@@ -3,6 +3,7 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
         var $pre = $(this);
         var source = $pre.text();
         var readOnly = $pre.hasClass('readonly');
+        var nodeVersion = $pre.data('node-version');
 
         var $div = $('<div>');
         $pre.replaceWith($div);
@@ -11,6 +12,7 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
             element: $div.get(0),
             source: source,
             readOnly: readOnly,
+            nodeVersion: nodeVersion,
             onLoad: function(){}
         });
     }
