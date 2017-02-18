@@ -1,6 +1,6 @@
-# Embed Tonic in GitBook
+# Runkit for GitBook
 
-This GitBook plugins makes it easy to embed [tonic](https://www.tonicdev.com) notebook in a GitBook.
+Run the sample code in your documentation right on your website using [Runkit](https://runkit.com/).
 
 ### How to use it?
 
@@ -8,27 +8,27 @@ Configure the plugin in your `book.json`:
 
 ```js
 {
-    "plugins": ["tonic"]
+    "plugins": ["runkit"]
 }
 ```
 
-Include a notebook using the `tonic` block:
+Include a notebook using the `runkit` block:
 
 ```md
 Here is notebook:
 
-{% tonic %}
+{% runkit %}
 // GeoJSON!
 var google = "https://storage.googleapis.com/maps-devrel/google.json"
 JSON.parse(await require("request-promise")(google))
-{% endtonic %}
+{% endrunkit %}
 
 
 And here is a read-only notebook:
 
-{% tonic readOnly=true %}
+{% runkit readOnly=true %}
 // GeoJSON!
 var google = "https://storage.googleapis.com/maps-devrel/google.json"
 JSON.parse(await require("request-promise")(google))
-{% endtonic %}
+{% endrunkit %}
 ```

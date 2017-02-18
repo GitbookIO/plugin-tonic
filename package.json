@@ -1,18 +1,38 @@
 {
-    "name": "gitbook-plugin-tonic",
-    "description": "Embed tonic notebook into your book",
-    "main": "index.js",
-    "version": "1.1.0",
-    "engines": {
-        "gitbook": ">=2.0.0"
-    },
-    "homepage": "https://github.com/GitbookIO/plugin-tonic",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/GitbookIO/plugin-tonic.git"
-    },
-    "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/GitbookIO/plugin-tonic/issues"
-    }
+  "title": "RunKit",
+  "name": "gitbook-plugin-runkit",
+  "description": "Run the sample code in your documentation right on your website using RunKit",
+  "version": "0.0.0",
+  "main": "index.js",
+  "browser": "./_assets/plugin.js",
+  "ebook": "./_assets/plugin.js",
+  "dependencies": {
+    "gitbook-core": "^4.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "gitbook-plugin": "^4.0.0-alpha.4",
+    "eslint": "3.7.1",
+    "eslint-config-gitbook": "1.4.0"
+  },
+  "engines": {
+    "gitbook": ">=4.0.0-alpha.0"
+  },
+  "scripts": {
+    "lint": "eslint ./",
+    "build-website": "gitbook-plugin build ./src/index.js ./_assets/plugin.js",
+    "prepublish": "npm run build-website",
+    "test": "gitbook-plugin test && npm run lint"
+  },
+  "homepage": "https://github.com/GitbookIO/plugin-runkit",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GitbookIO/plugin-runkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GitbookIO/plugin-runkit/issues"
+  },
+  "gitbook": {
+    "properties": {}
+  }
 }
